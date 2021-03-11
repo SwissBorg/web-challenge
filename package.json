@@ -1,0 +1,12 @@
+{
+  "name": "transactions-mock-api",
+  "version": "1.0.0",
+  "description": "mock HTTP API server for transactions data - SwissBorg recruitment task",
+  "main": "server.js",
+  "author": "Marcin Baraniecki <marcin@swissborg.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Web challenge mock data HTTP API server",
+    "description": "TODO",
+    "version": "1.0.0"
+  },
+
+  "host": "localhost:8080",
+  "basePath": "/api",
+  "schemes": ["http"],
+  "paths": {
+    "/transactions": {
+      "get": {
+        "summary": "returns a list of mock transactions",
+        "description": "Returs a hardcoded, immutable list of mock transactions. Pay special attention to possible values of the following fields: `type`, `status`, `currency`.",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/eur-rates": {
+      "get": {
+        "summary": "returns nullable euro rates for common currencies",
+        "description": "Returns euro rates for available currencies.\n\nWARNING: rates change everytime this endpoint is queried and MAY CONTAIN `null` instead of numeric values!",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

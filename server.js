@@ -1,7 +1,11 @@
 const express = require("express");
+const swaggerUi = require("swagger-ui-express");
+const swaggerJson = require("./swagger.json");
+const transactions = require("./transactions.json");
 const app = express();
 const PORT = 8080;
-const transactions = require("./transactions.json");
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerJson));
 
 const BASE_EUR_RATES = {
   BTC: 45000,

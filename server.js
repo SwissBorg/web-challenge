@@ -17,8 +17,8 @@ const generateRates = () => ({
   USD: generateRate(BASE_EUR_RATES.USD),
 });
 
-app.get("/transactions", (_, res) => res.send(transactions));
+app.get("/api/transactions", (_, res) => res.send(transactions));
 
-app.get("/eur-rates", (_, res) => res.send(generateRates()));
+app.get("/api/eur-rates", (_, res) => res.send(generateRates()));
 
 app.listen(PORT, () => console.log(`mock transactions HTTP API server running at http://localhost:${PORT}`));

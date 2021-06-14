@@ -1,10 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 const swaggerUi = require("swagger-ui-express");
 const swaggerJson = require("./swagger.json");
 const transactions = require("./transactions.json");
 const app = express();
 const PORT = 8080;
 
+app.use(cors());
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerJson));
 
 const BASE_EUR_RATES = {

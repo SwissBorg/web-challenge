@@ -1,6 +1,6 @@
 {
   "name": "transactions-mock-api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "mock HTTP API server for transactions data - SwissBorg recruitment task",
   "main": "server.js",
   "author": "Marcin Baraniecki <marcin@swissborg.com>",
@@ -8,8 +8,8 @@
   "private": false,
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "swagger-ui-express": "^5.0.0"
+    "express": "^4.21.2",
+    "swagger-ui-express": "^5.0.1"
   },
   "scripts": {
     "start": "node server.js"

@@ -10,7 +10,7 @@ app.use(cors());
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerJson));
 
 const BASE_EUR_RATES = {
-  BTC: 24000,
+  BTC: 94000,
   CHF: 1.05,
   USD: 0.93,
 };

@@ -4,9 +4,9 @@
 
 ### How to run the mock data HTTP server?
 
-0. Prerequisites: node.js & yarn.
-1. Run `yarn install` to install all dependencies (tested with yarn v1.22.19)
-2. Run `yarn start` to start the server (tested with node.js v16.17.0)
+0. Prerequisites: node.js & pnpm.
+1. Run `pnpm install` to install all dependencies (tested with pnpm v10.0.0)
+2. Run `pnpm start` to start the server (tested with node.js v22.13.1)
 3. For API documentation (swagger), open http://localhost:8080/api-docs in your browser.
 
 ### The task
@@ -17,16 +17,16 @@ The first table should consist of transactions data columns, along with calculat
 
 | timestamp   | currency | amount | eur equiv | type       | status    |
 | ----------- | -------- | ------ | --------- | ---------- | --------- |
-| Aug 23 2023 | BTC      | 1      | 24700     | deposit    | completed |
-| Aug 25 2023 | CHF      | 100    | 105       | withdrawal | pending   |
+| Jan 11 2025 | BTC      | 1.005  | 94721.25  | deposit    | completed |
+| Jan 12 2025 | CHF      | 100.73 | 105.11    | withdrawal | pending   |
 | ...         | ...      | ...    | ...       | ...        | ...       |
 
-The second table should summarize the amounts of all deposits & withdrawals grouped by currency:
+The second table should summarize the transaction amounts of all deposits & withdrawals grouped by currency:
 
 | currency | total completed withdrawals | total completed deposits | total pending withdrawals | total pending deposits | total balance (completed deposits - completed withdrawals) | total balance eur equiv |
 | -------- | --------------------------- | ------------------------ | ------------------------- | ---------------------- | ---------------------------------------------------------- | ----------------------- |
-| BTC      | 3                           | 5                        | 1                         | 0                      | 2                                                          | 48400                   |
-| USD      | 1000                        | 100                      | 0                         | 500                    | -900                                                       | -837                    |
+| BTC      | 3.102                       | 5.627                    | 1.038                     | 0                      | 2.525                                                      | 239120.28               |
+| USD      | 1010.50                     | 15.50                    | 0                         | 502.56                 | -995.00                                                    | -947.62                 |
 | ...      | ...                         | ...                      | ...                       | ...                    | ...                                                        | ...                     |
 
 Pay **special attention** to the API description (swagger) available at http://localhost:8080/api-docs.
